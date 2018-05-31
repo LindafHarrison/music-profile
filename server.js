@@ -15,11 +15,13 @@ mongoose.connection.once('open', () => {
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
-// app.get('/', (req, res) => {
-//   res.sendFile('login.html');
-// });
-//route for login
 app.get('/', (req, res) => {
+  res.sendFile('login.html');
+});
+
+// route for login
+
+app.get('/login', (req, res) => {
   res.redirect('process.env.BACKEND_URI || "http://localhost:8888"');
   // res.cookie('access token', req.query('access_token'))
 //   res.send('success')
