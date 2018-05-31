@@ -16,10 +16,10 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
 //route for login
-app.get('/', (req, res) => {
-  res.cookie('access token', req.query('access_token'))
-  res.send('success')
-})
+// app.get('/', (req, res) => {
+//   res.cookie('access token', req.query('access_token'))
+//   res.send('success')
+// })
 
 app.get('/allSets', listItemsController.getExistingSetlist);
 app.get('/playLists', listItemsController.getExistingPlaylist);
