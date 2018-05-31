@@ -5,7 +5,7 @@ const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
 const listItemsController = require('./controllers/ListItemsController.js')
 
-app.use(express.static('build'));
+// app.use(express.static('build'));
 
 mongoose.connect('mongodb://paul:codesmith@ds139960.mlab.com:39960/music-profile');
 mongoose.connection.once('open', () => {
