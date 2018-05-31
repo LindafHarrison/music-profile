@@ -21,7 +21,9 @@ app.get('/', (req, res) => {
   res.send('success')
 })
 
-app.get('/all', listItemsController.getExistingList);
+app.get('/allSets', listItemsController.getExistingSetlist);
+app.get('/playLists', listItemsController.getExistingPlaylist);
+app.get('/albums', listItemsController.getExistingAlbums);
 
 app.post('/add', listItemsController.addItem);
 
